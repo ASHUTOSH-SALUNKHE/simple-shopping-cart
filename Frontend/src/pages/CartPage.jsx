@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { handleCart} from "../reducers/cartReducer";
 import toast from "react-hot-toast";
-import CartProducts from "../components/cartProducts";
+import CartProducts from "../components/CartProducts";
 import CheckedoutProducts from "../components/CheckedoutProducts";
 
 function CartPage() {
