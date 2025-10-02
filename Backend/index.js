@@ -27,11 +27,12 @@ app.use("/api/checkProducts", checkProducts);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../Frontend/dist")));
 
-  // Catch-all route for SPA
-  app.get("/:path(*)", (req, res) => {
+  // Fallback for React Router
+  app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../Frontend/dist/index.html"));
   });
 }
+
 
 // Start server if not in test mode
 if (process.env.NODE_ENV !== "test") {
