@@ -19,7 +19,7 @@ describe("POST /api/checkProducts", () => {
       .post("/api/checkProducts")
       .send({ id: null });
 
-    // Change to 400 because the route returns 400 for invalid input
+    
     expect(res.statusCode).toBe(400);
     expect(res.body).toHaveProperty("success", false);
     expect(res.body).toHaveProperty("message");
